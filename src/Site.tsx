@@ -8,12 +8,13 @@ export default function Site() {
   }
   return (
     <>
-      <AppBar position="sticky" ref={ref}>
+      <AppBar ref={ref}>
         <Toolbar/>
       </AppBar>
+      <Toolbar/>
       <Container sx={{
         ...height !== undefined && {
-          '& :before': {
+          '& :target:before': {
             display: 'block',
             content: '" "',
             height: `${height}px`,
